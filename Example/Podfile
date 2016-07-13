@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GifTabBarController_Example' do
+  pod 'GifTabBarController', :path => '../'
+
+  target 'GifTabBarController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
