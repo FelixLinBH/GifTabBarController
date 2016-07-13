@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   #   'GifTabBarController' => ['GifTabBarController/Assets/*.png']
   # }
 
-  s.public_header_files = 'GifTabBarController/Classes/GifTabBarHeader.h'
+  s.public_header_files = 'GifTabBarController/Classes/*.h','GifTabBarController/Classes/**/*.h'
   s.frameworks = 'UIKit'
   s.dependency 'FLAnimatedImage'
   s.dependency 'Masonry'
