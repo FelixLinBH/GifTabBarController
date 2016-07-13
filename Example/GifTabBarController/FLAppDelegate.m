@@ -7,12 +7,45 @@
 //
 
 #import "FLAppDelegate.h"
+#import "GifTabBarHeader.h"
 
 @implementation FLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    UIViewController *one = [[UIViewController alloc]init];
+    one.view.backgroundColor = [UIColor blueColor];
+    UIViewController *two = [[UIViewController alloc]init];
+    two.view.backgroundColor = [UIColor redColor];
+    UIViewController *three = [[UIViewController alloc]init];
+    three.view.backgroundColor = [UIColor yellowColor];
+    UIViewController *four = [[UIViewController alloc]init];
+    four.view.backgroundColor = [UIColor greenColor];
+    UIViewController *five = [[UIViewController alloc]init];
+    five.view.backgroundColor = [UIColor grayColor];
+    
+    NSURL *url1 = [[NSBundle mainBundle] URLForResource:@"giphy-1" withExtension:@"gif"];
+    NSURL *url2 = [[NSBundle mainBundle] URLForResource:@"giphy-2" withExtension:@"gif"];
+    NSURL *url3 = [[NSBundle mainBundle] URLForResource:@"giphy-3" withExtension:@"gif"];
+    NSURL *url4 = [[NSBundle mainBundle] URLForResource:@"giphy-4" withExtension:@"gif"];
+    NSURL *url5 = [[NSBundle mainBundle] URLForResource:@"giphy-5" withExtension:@"gif"];
+    
+    //normal
+    GifTabBarItem *oneTabBarItem = [[GifTabBarItem alloc]initWithTitle:@"One" gifUrlString:[url1 absoluteString] viewController:one];
+    
+    GifTabBarItem *twoTabBarItem = [[GifTabBarItem alloc]initWithTitle:@"Two" gifUrlString:[url2 absoluteString] viewController:two normalImage:[UIImage imageNamed:@"Contacts-30-1"] selectedImage:[UIImage imageNamed:@"Contacts-30-2"]];
+    
+    GifTabBarItem *threeTabBarItem = [[GifTabBarItem alloc]initWithTitle:@"Three" gifUrlString:[url3 absoluteString] viewController:three];
+    GifTabBarItem *fourTabBarItem = [[GifTabBarItem alloc]initWithTitle:@"Four" gifUrlString:[url4 absoluteString] viewController:four normalImage:[UIImage imageNamed:@"Contacts-30-1"] selectedImage:[UIImage imageNamed:@"Contacts-30-2"]];
+    GifTabBarItem *fiveTabBarItem = [[GifTabBarItem alloc]initWithTitle:@"Five" gifUrlString:[url5 absoluteString] viewController:five];
+    
+    GifTabBarController *tab = [[GifTabBarController alloc]initWithTabItems:@[oneTabBarItem,twoTabBarItem,threeTabBarItem,fourTabBarItem,fiveTabBarItem]];
+    
+    self.window.rootViewController = tab;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    
     return YES;
 }
 
