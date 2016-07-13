@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GifTabBarController'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'TabBarController with Gif tabBarItem.'
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/FelixLinBH/GifTabBarController'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://raw.githubusercontent.com/FelixLinBH/GifTabBarController/master/1.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'felix.lin' => 'fly_81211@hotmail.com' }
   s.source           = { :git => 'https://github.com/FelixLinBH/GifTabBarController.git', :tag => s.version.to_s }
