@@ -1,6 +1,5 @@
 # GifTabBarController
 
-[![CI Status](http://img.shields.io/travis/felix.lin/GifTabBarController.svg?style=flat)](https://travis-ci.org/felix.lin/GifTabBarController)
 [![Version](https://img.shields.io/cocoapods/v/GifTabBarController.svg?style=flat)](http://cocoapods.org/pods/GifTabBarController)
 [![License](https://img.shields.io/cocoapods/l/GifTabBarController.svg?style=flat)](http://cocoapods.org/pods/GifTabBarController)
 [![Platform](https://img.shields.io/cocoapods/p/GifTabBarController.svg?style=flat)](http://cocoapods.org/pods/GifTabBarController)
